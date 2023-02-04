@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+pnpm build &&
+  pnpm --filter=edge-fyi publish "$@"

@@ -1,0 +1,36 @@
+{
+  "name": "edge-fyi",
+  "description": "Self-host your own short link service using Vercel Edge Config",
+  "version": "0.0.1",
+  "author": "Griko Nibras <griko@nibras.co>",
+  "repository": "https://github.com/grikomsn/edge-fyi.git",
+  "homepage": "https://github.com/grikomsn/edge-fyi",
+  "bugs": "https://github.com/grikomsn/edge-fyi/issues",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**.js",
+    "dist/**.cjs",
+    "dist/**.mjs",
+    "dist/**.d.ts"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint --fix \"src/**/*.ts\""
+  },
+  "dependencies": {
+    "@vercel/edge-config": "^0.1.1",
+    "@vercel/node": "^2.9.0",
+    "typescript": "^4.9.5"
+  },
+  "keywords": [
+    "edge-fyi",
+    "redirect",
+    "vercel-edge",
+    "vercel"
+  ],
+  "license": "MIT"
+}

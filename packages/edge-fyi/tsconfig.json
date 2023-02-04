@@ -1,0 +1,8 @@
+{
+  "extends": "@grikomsn/style-guide-core/tsconfig",
+  "exclude": ["node_modules"],
+  "include": ["**/*.ts"],
+  "compilerOptions": {
+    "moduleResolution": "node"
+  }
+}
