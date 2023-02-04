@@ -21,10 +21,9 @@
     "dev": "tsup --watch",
     "lint": "eslint --fix \"src/**/*.ts\""
   },
-  "dependencies": {
-    "@vercel/edge-config": "^0.1.1",
-    "@vercel/node": "^2.9.0",
-    "typescript": "^4.9.5"
+  "peerDependencies": {
+    "@vercel/edge-config": ">=0",
+    "@vercel/node": ">=2"
   },
   "keywords": [
     "edge-fyi",

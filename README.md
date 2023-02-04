@@ -8,15 +8,17 @@ Self-host your own short link service using Vercel Edge Config
 
 ## Installing
 
+`edge-fyi` does not include `@vercel/edge-config` and `@vercel/node` as dependencies. You need to install them yourself.
+
 ```sh
 # using npm
-npm install edge-fyi
+npm install @vercel/edge-config @vercel/node edge-fyi
 
 # using yarn
-yarn add edge-fyi
+yarn add @vercel/edge-config @vercel/node edge-fyi
 
 # using pnpm
-pnpm install edge-fyi
+pnpm install @vercel/edge-config @vercel/node edge-fyi
 ```
 
 ## Usage
