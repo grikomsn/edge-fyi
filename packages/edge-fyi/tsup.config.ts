@@ -5,7 +5,7 @@ import packageJson from "./package.json";
 export default defineConfig(({ watch }) => ({
   clean: !watch,
   dts: true,
-  entry: ["src/*.ts"],
+  entry: ["src/index.ts"],
   external: [...Object.keys(packageJson.peerDependencies)],
   format: ["cjs", "esm"],
   minify: !watch,

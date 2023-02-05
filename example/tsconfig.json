@@ -1,8 +1,5 @@
 {
   "extends": "@grikomsn/style-guide-core/tsconfig.json",
   "exclude": ["node_modules"],
-  "include": ["**/*.ts"],
-  "compilerOptions": {
-    "moduleResolution": "node"
-  }
+  "include": ["*.d.ts", "api/**/*.ts"]
 }

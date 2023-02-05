@@ -23,12 +23,29 @@ pnpm install @vercel/edge-config @vercel/node edge-fyi
 
 ## Usage
 
-Create **`api/[slug].ts` or `api/handler.ts`** (or any other name) and export default the `fyi` function with your configuration.
+Create **`api/[slug].ts` or `api/handler.ts`** (or any other name) and export default the `fyi` ([serverless](https://vercel.com/docs/concepts/functions/serverless-functions)) or `edgeFyi` ([edge](https://vercel.com/docs/concepts/functions/edge-functions)) function with your configuration.
 
 ```ts
 import { fyi } from "edge-fyi";
 
 export default fyi({
+  query: "slug", // (required) the query parameter to use as the slug
+  host: "nibras.co", // (optional) redirect not found short links to https://nibras.co/:slug
+  edgeClient: customClient, // (optional) custom vercel edge client
+  onNotFound: (req, res) => {}, // (optional) callback when short link is not found
+});
+```
+
+If you're planning to use edge functions, make sure to export `config` and set the runtime to `edge`.
+
+```ts
+import { edgeFyi } from "edge-fyi";
+
+export const config = {
+  runtime: "edge",
+};
+
+export default edgeFyi({
   query: "slug", // (required) the query parameter to use as the slug
   host: "nibras.co", // (optional) redirect not found short links to https://nibras.co/:slug
   edgeClient: customClient, // (optional) custom vercel edge client

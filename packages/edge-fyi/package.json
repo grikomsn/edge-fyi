@@ -1,7 +1,7 @@
 {
   "name": "edge-fyi",
   "description": "Self-host your own short link service using Vercel Edge Config",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Griko Nibras <griko@nibras.co>",
   "repository": "https://github.com/grikomsn/edge-fyi.git",
   "homepage": "https://github.com/grikomsn/edge-fyi",
@@ -24,6 +24,11 @@
   "peerDependencies": {
     "@vercel/edge-config": ">=0",
     "@vercel/node": ">=2"
+  },
+  "peerDependenciesMeta": {
+    "@vercel/node": {
+      "optional": true
+    }
   },
   "keywords": [
     "edge-fyi",

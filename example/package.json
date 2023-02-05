@@ -1,0 +1,11 @@
+{
+  "name": "edge-fyi-example",
+  "version": "0.0.0",
+  "dependencies": {
+    "@vercel/edge-config": "^0.1.1",
+    "@vercel/node": "^2.9.0",
+    "edge-fyi": "workspace:*",
+    "typescript": "^4.9.5"
+  },
+  "private": true
+}
